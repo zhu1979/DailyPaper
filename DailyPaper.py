@@ -125,21 +125,6 @@ def get_daily(show_digest: bool = False, show_url: bool = False, show_image: boo
 				daily.append(f"--> {news['url']}")
 			if show_image and news['imgsrc']:
 				daily.append(f"<img src='{news['imgsrc']}' alt='{news['title']}'>")
-			# if show_url:
-			# 	if news['url']:
-			# 		daily.append(f"{idx}、<a href='{news['url']}'>{news['title']}</a>")
-			# 	else:
-			# 		daily.append(f"{idx}、{news['title']}")
-			# 	if show_image:
-			# 		if news['imgsrc']:
-			# 			if news['url']:
-			# 				daily.append(f"<a href='{news['url']}'><img src='{news['imgsrc']}' alt='{news['title']}'></a>")
-			# 			else:
-			# 				daily.append(f"<img src='{news['imgsrc']}' alt='{news['title']}'>")
-			# else:
-			#
-			# 	if show_digest:
-			# 		daily.append(f"--> {news['digest']}")
 
 	# 每日一句
 	res = get_word_of_famous_people()
