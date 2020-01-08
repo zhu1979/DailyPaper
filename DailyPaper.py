@@ -95,9 +95,9 @@ def get_daily(show_digest: bool = False, show_url: bool = False, show_image: boo
 	# 获取天气预报
 	res = get_weather()
 	if res:
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		daily.append(f"天气预报：[ 城市：{city_name} ]")
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		daily.append(f"日期：{res['date']}")
 		daily.append(f"星期：{res['week']}")
 		daily.append(f"天气：{res['weather']}")
@@ -114,9 +114,9 @@ def get_daily(show_digest: bool = False, show_url: bool = False, show_image: boo
 	# 今日热点
 	res = get_news()
 	if res:
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		daily.append(f'今日热点：')
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		for idx, news in enumerate(res, 1):
 			daily.append(f"{idx}、{news['title']}")
 			if show_digest and news['digest']:
@@ -129,9 +129,9 @@ def get_daily(show_digest: bool = False, show_url: bool = False, show_image: boo
 	# 每日一句
 	res = get_word_of_famous_people()
 	if res:
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		daily.append(f'每日一句：')
-		daily.append(f'****************************************')
+		daily.append(f'******************************')
 		daily.append(f"{res['content']} —— {res['mrname']}")
 	if len(daily) > 0:
 		content = '\n'.join(daily)
